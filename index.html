@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      type="module"
+      src="https://unpkg.com/@fluentui/web-components"
+    ></script>
+    <script src="./utils.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      .col-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+      }
+
+      .col-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+      }
+    </style>
+  </head>
+  <body onload="init()">
+    <div class="main-container">
+      <div class="col-4">
+        <div>
+          <fluent-select id="myselect">
+            <fluent-option value="0">Student gender</fluent-option>
+            <fluent-option value="1">Student status</fluent-option>
+            <fluent-option value="2">Student grade</fluent-option>
+            <fluent-option value="3">Financial Aid</fluent-option>
+            <fluent-option value="4">Revenue</fluent-option>
+          </fluent-select>
+        </div>
+        <div>
+          <fluent-select>
+            <fluent-option>Number records</fluent-option>
+          </fluent-select>
+        </div>
+        <div>
+          <fluent-radio-group name="fruits">
+            <label style="color: --var(neutral-foreground-rest)" slot="label">
+              Numbers
+            </label>
+            <fluent-radio>Apples</fluent-radio>
+            <fluent-radio>Bananas</fluent-radio>
+            <fluent-radio>Bananas</fluent-radio>
+          </fluent-radio-group>
+        </div>
+      </div>
+      <div class="col-8">
+        <div id="my_dataviz"></div>
+      </div>
+    </div>
+  </body>
+</html>
